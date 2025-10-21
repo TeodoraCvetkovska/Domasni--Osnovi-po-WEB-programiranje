@@ -1,0 +1,13 @@
+/* External styles sheet for domasna2.html */
+
+body {font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: #f5e09b;}
+h1 {color: #80A1BA; text-align: center; font-size: 3em; text-decoration: overline; text-shadow: -6px 4px 3px rgb(193, 192, 192);}
+.special {color: #91C4C3; text-align: center;}
+.strongstyle {font-weight: bolder; font-size: medium; color: #80A1BA; text-decoration: underline;}
+ol {background-color: #B4DEBD; border-width: thin; border-color: #B4DEBD; border-radius: 1ex; font-size: 1.1em;}
+.button {font-size: 2em; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; color: #1b5481; border-width: thick; 
+    border-color: #1b5481; border-radius: 1ex;}
+a.nodec {text-decoration: none; font-size: 1.2em; color: #1b5481; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;}
+a:hover {text-decoration: underline; color: #91C4C3;}
+#slika {-webkit-transition: -webkit-transform 4s; -moz-transition: -moz-transform 4s; -o-transition: -o-transform 4s; transition: transform 4s;}
+#slika:hover {-webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg);}

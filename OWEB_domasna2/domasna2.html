@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Квиз по географија</title>
+        <link rel="stylesheet" type="text/css" href="domasna2.css">
+    </head>
+
+    <header>
+        <h1 id="beginning">Квиз по географија</h1>
+    </header>
+
+    <body>
+        <p class="special">Провери го своето знаење по географија. <br>
+          <strong class="strongstyle"><em>Одговори на следните прашања. Само еден одговор е точен.</em></strong></p>
+        <hr>
+        <form method="post" action="https://education.nationalgeographic.org/resource/geography-article/">
+            <input type="hidden" name="recipient" value="person@gmail.com">
+            <input type="hidden" name="subject" value="geography quiz">
+            <input type="hidden" name="redirect" value="main.html">
+
+            <ol>
+            <li>
+                <strong>Кој е најголем континент во светот по површина?</strong> <br>
+
+                <label>Антартик
+               <input name="continent" type="radio" value="Antartica">  </label>
+               <label>Азија
+               <input name="continent" type="radio" value="Asia">      </label>
+                <label>Африка
+                <input name="continent" type="radio" value="Africa">   </label>
+                <label>Северна Америка
+                <input name="continent" type="radio" value="NorthAmerica"> </label>
+            </li>
+            <br>
+
+            <li>
+                <strong>Кој е главен град на Нов Зеланд?</strong> <br>
+
+                <label>Сиднеј
+                <input name="maincity" type="radio" value="Sydney">  </label>
+                <label>Канбера
+                <input name="maincity" type="radio" value="Canberra"> </label>
+                <label>Велингтон
+                <input name="maincity" type="radio" value="Wellington">  </label>
+                <label>Окленд
+                <input name="maincity" type="radio" value="Auckland">   </label>
+            </li>
+            <br>
+
+            <li>
+                <strong>Која е најдолгата река во светот?</strong> <br>
+
+                <label>Избери:
+                    <select name="river">
+                        <option selected>Мисисипи</option>
+                        <option>Амазон</option>
+                        <option>Јангце</option>
+                        <option>Нил</option>
+                    </select>
+                </label>
+
+            </li>
+            <br>
+
+            <li>
+                <strong>Кој е највисок планински врв во Македонија?</strong><br>
+
+                <label>Избери:
+                    <select name="mountainpeak">
+                        <option>Титов Врв</option>
+                        <option>Голем Кораб</option>
+                        <option>Солунска Глава</option>
+                        <option selected>Пелистер</option>
+                    </select>
+                </label>
+            </li>
+            <br>
+
+            <li>
+                <strong>Која држава е прикажана на сликата?</strong><br>
+                <br>
+                <img id="slika" src="drzava1.jpg" width="350" height="400" alt="Slika od drzava"><br>
+
+                <label>Избери:
+                    <select name="countrypic">
+                        <option>Јапонија</option>
+                        <option>Сингапур</option>
+                        <option>Нов Зеланд</option>
+                        <option selected>Филипини</option>
+                    </select>
+                </label>
+            </li>
+            <br>
+            </ol> 
+
+            <p> <input class="button" type="submit" value="Испрати"> </p>
+            <p><a class="nodec" href="#beginning">Назад на почеток</a></p>
+            <hr>
+
+        </form>
+    </body>
+
+
+</html>
