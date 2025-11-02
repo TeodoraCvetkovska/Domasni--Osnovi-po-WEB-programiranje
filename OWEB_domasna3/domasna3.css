@@ -1,0 +1,8 @@
+li {display: inline; margin-right: 10px;}
+ul {margin-top: 10ex;}
+img {width: 200px; height: 250px; cursor: pointer; border-radius: 1ex;}
+#startbutton {font-size: 2em; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 2ex; border-radius: 1ex; 
+    color: rgb(126, 166, 241); border-width: medium; border-color: rgb(84, 84, 147); cursor: pointer;}
+h1 {margin-bottom: 0; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #7575d4; text-decoration: solid; text-align: center;}
+h4 {margin: 0; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #7575d4; text-decoration: solid; text-align: center;}
+body {background-color: rgb(247, 243, 215);}
