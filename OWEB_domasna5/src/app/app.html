@@ -1,0 +1,16 @@
+<div class="pocetok">
+  <img class="logo" src="https://th.bing.com/th/id/OIP.vcakitCPJ9cmJI3We74ZSQHaE4?w=257&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+  <span class="quote">Champions believe in themselves even when no one does.</span>
+</div>
+
+<div class="position">
+  <app-vozac  *ngFor="let moto of Shoferi; index as i; odd as nepar; even as par" 
+  [motordzija]="moto" (click)="soul()"  [indeks]="i+1"
+  [class.is-odd]="nepar"
+  [class.is-even]="par"></app-vozac>
+  
+</div>
+
+<div class="kraj">
+  <span>Motogp website. All rights reserved.</span>
+</div>
