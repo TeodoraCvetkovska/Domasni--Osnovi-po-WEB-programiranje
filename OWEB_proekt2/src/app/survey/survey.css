@@ -1,0 +1,13 @@
+.textStyle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bolder;
+}
+
+.button{
+    background-color: rgb(70, 144, 184);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkslategrey;
+    border-radius: 3em;
+    border-width: 0.3em;
+    border-color: rgb(76, 121, 194);
+}

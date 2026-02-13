@@ -1,0 +1,19 @@
+
+ <div class="container" style="height: 500px; margin-top: 10ex; padding-top: 10ex;">
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; margin-bottom: 2ex;">Sign up or Log in to our site</h2>
+
+            <div class="form-group">
+            <label>Username:
+            <input #username type="text" class="form-control" placeholder="Enter username: " required>
+            </label> </div>
+            <div class="form-group">
+            <label>Password:
+            <input #password type="password" class="form-control" placeholder="Enter password: " required>
+            </label> </div>
+            <div class="form-group form-check">
+            <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+            </label>
+            </div>
+            <button type="submit" class="button" (click)="onLogin(username.value)">Submit</button>
+    </div>

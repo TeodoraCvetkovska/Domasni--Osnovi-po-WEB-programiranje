@@ -1,0 +1,51 @@
+
+<div class="container">
+        <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; margin-bottom: 2ex;">Gallery  <i class="fa-solid fa-camera-retro" style="color: purple;"></i></h2>
+        <div class="alert alert-warning"><p><strong>Log in / Sign up</strong> to <strong> comment </strong> or <strong> like / dislike </strong>
+        on photos! <i class="fa-regular fa-face-smile-wink"></i> </p></div>
+
+        <div *ngFor="let red of gallerySliki" class="card-deck mb-5">
+            <div *ngFor="let post of red" class="card bg-light">
+                <img class="card-img-top" [src]="post?.url" [alt]="post?.alt">
+                <div class="card-body">
+                    <p class="card-text">{{post?.text}}</p>
+                    <button type="button" class="likebutton" [disabled]="userName == 'Guest'" (click)="changeLikes(post)">
+                    <i class="fa-regular fa-thumbs-up"></i>    
+                    Likes <span class="badge badge-light">{{post?.likes}}</span>
+                    </button>
+                    <button type="button" class="dislikebutton" [disabled]="userName == 'Guest'" (click)="changeDislikes(post)">
+                    <i class="fa-regular fa-thumbs-down"></i>    
+                    Dislikes <span class="badge badge-light">{{post?.dislikes}}</span>
+                    </button>
+                    <br>
+
+                    <div class="comments-display mb-3 mt-2" *ngIf="post.comments?.length > 0">
+                    <h6>Comments:</h6>
+                    <ul class="list-group">
+                        <li *ngFor="let c of post.comments; let j = index" 
+                            class="list-group-item d-flex justify-content-between align-items-center"> 
+                            <strong> {{userName}}: </strong>
+                        {{ c }}
+                        <button class="dislikebutton" (click)="deleteComment(post, j)">
+                            x
+                        </button>
+                        </li>
+                    </ul>
+                    </div>
+
+                    <div class="form-group mt-2" *ngIf="userName !== 'Guest'">
+                    <i class="fa-solid fa-comments"></i> 
+                    <label for="comment"> Add a comment:</label>
+                    <textarea class="form-control" #commentBox  rows="3" ></textarea>
+                    <button type="button" class="button" 
+                    (click)="addComment(post, commentBox.value); commentBox.value=''">Post</button>
+                    </div>
+
+                    <p *ngIf="userName === 'Guest'" class="text-muted">
+                        <button class="button" routerLink="/sign-in">Sign in to like/dislike or leave a comment! </button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+</div>

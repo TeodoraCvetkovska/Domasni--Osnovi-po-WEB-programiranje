@@ -1,0 +1,8 @@
+.dislikebutton{
+    background-color: rgb(212, 89, 45);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkslategrey;
+    border-radius: 3em;
+    border-width: 0.3em;
+    border-color: rgb(133, 41, 23);
+}

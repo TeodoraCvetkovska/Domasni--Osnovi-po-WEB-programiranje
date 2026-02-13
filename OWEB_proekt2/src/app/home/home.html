@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div id="bgimage">
+        <div id="title"><h1>Auckland</h1></div>
+    </div>
+    <div class="jumbotron">
+        <div *ngIf="userName != 'Guest'">
+           <h2 class="textStyle">Welcome {{userName}}!</h2> 
+        </div>
+        <h2 class="textStyle"> Discover the hidden gems of Auckland!</h2>
+        <p>Auckland - a city in the North Island of New Zealand. Famous for its beatiful nature and stunning architecture.
+            A place where calmness, fun and adventure are a garantee!
+        </p>
+    </div> 
+</div> 
+
+<div class="slides">
+        <div class="card-deck">
+            <div *ngFor="let slika of homeSliki; index as i">
+                <ng-container *ngIf="i == currentIndex">
+                    <div class="card bg-light fade-in centered">
+                        <img class="card-img-bottom" [src]="slika?.url" [alt]="slika?.alt">
+                        <div class="card-body">
+                            <h3 class="card-title textStyle">{{slika?.title}}</h3>
+                            <p class="card-text">{{slika?.text}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+</div> 
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h2 class="textStyle">Interested already? Check out our <button class="button" routerLink="/gallery">Gallery</button> and <button class="button" routerLink="/blogs">Blogs</button> section!</h2>
+
+    </div>
+</div>

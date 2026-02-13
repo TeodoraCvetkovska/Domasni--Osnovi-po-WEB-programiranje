@@ -1,0 +1,75 @@
+
+<div class="container">
+    <h2 class="textStyle" style="margin-bottom: 2ex;">Blogs <i class="fa-solid fa-pen-to-square" style="color: #74C0FC;"></i></h2>
+
+        <div *ngFor="let blog of blogContent" class="row">
+            <div *ngIf="blog?.title != ''" class="col-lg-12 bg-light rounded-lg border border-info mb-5">
+               <h3 style="text-decoration: underline;">{{blog?.title}}</h3>  
+               <p>Posted on {{blog?.posted}}, written by {{blog?.author}}</p>
+    
+               <p class="pStyle">{{blog?.intro}}</p>
+
+
+               <ng-container *ngFor="let header of blog?.h4; let i = index">
+                    <div *ngIf="header !== '' && blog?.text[i] !== ''">
+                        <h4 class="textStyle">{{ header }}</h4>
+                        <p>{{ blog?.text[i] }}</p>
+                    </div>
+                </ng-container>
+
+                <p class="pStyle">{{blog?.end}}</p>
+
+               <div class="row justify-content-center g-4" *ngIf="blog?.photos?.length > 0">
+  
+                    <ng-container *ngFor="let sl of blog.photos; index as i">
+                        <div class="col-md-4 d-flex justify-content-center mb-4">
+                        <div class="thumbnail text-center">
+                            <img [src]="sl" 
+                                [alt]="blog?.alt[i]" 
+                                class="img-rounded shadow-sm" 
+                                style="height: 250px; width: 200px; object-fit: cover;">
+                        </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="jumbotron">
+        
+            <h2 class="textStyle">Want to add your blog too? Fill out the necessary fields beneath and exchange your experience!</h2>
+
+        </div>
+        <div class="rounded-lg border border-info mb-5 p-3">
+            <div class="form-group mt-2">
+                       
+                    <label for="title">Title:</label>
+                    <textarea class="form-control" #title  rows="2" ></textarea>
+
+                    <div style="margin-top: 2ex;">
+                    <label>Select date of posting: 
+                        <input #date type = "date" />
+                    </label>
+                    </div>
+
+                    <label for="intro">Introduction:</label>
+                    <textarea class="form-control" #intro  rows="5" ></textarea>
+
+                    <label for="headings">Write your subtitles in order, each subtitle in a new line:</label>
+                    <textarea class="form-control" #headings  rows="10" ></textarea>
+
+                    <label for="paragraphs">Write your paragraphs in order, each paragraph in a new line:</label>
+                    <textarea class="form-control" #paragraphs  rows="30" ></textarea>
+
+                    <label for="end">Ending:</label>
+                    <textarea class="form-control" #end  rows="5" ></textarea>
+
+                    <button [disabled]="userName == 'Guest'" type="button" class="button" 
+                    (click)="createBlog(title.value, date.value, intro.value, headings.value, paragraphs.value, end.value);
+                    title.value=''; date.value=''; intro.value=''; headings.value=''; paragraphs.value=''; end.value=''">Post</button>
+            </div>
+        </div>
+
+</div>    

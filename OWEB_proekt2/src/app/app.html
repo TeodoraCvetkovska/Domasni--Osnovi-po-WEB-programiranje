@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="logo">
+        </a>
+        <span class="text-white me-3 p-3">Keep on exploring!</span>
+        <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button *ngIf="userName == 'Guest'" class="btn nav-link" routerLink="/sign-in">Sign up / Log in </button>
+
+                <div *ngIf="userName != 'Guest'" class="d-flex align-items-center">
+                    <span class="text-white me-3 p-3">Hi, {{ userName }}!</span>
+                    <button class="dislikebutton" (click)="logout()">
+                    Log Out
+                    </button>
+                </div>
+            </li>
+            <li class="nav-item dropdown" style="padding-right: 12ex;">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Menu</a>
+                <div class="dropdown-menu">
+                    <button class="btn dropdown-item active" routerLink="/home" >Home</button>
+                    <button class="btn dropdown-item" routerLink="/gallery" >Gallery</button>
+                    <button class="btn dropdown-item" routerLink="/blogs" >Blogs</button>
+                    <button class="btn dropdown-item" routerLink="/survey" >Survey</button>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>    
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<footer class="bg-secondary text-white mt-3">
+    <div class="container">
+            
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; text-align: center; font-size: small;">City Explorer - Explore Auckland</p>     
+    </div>
+</footer> 

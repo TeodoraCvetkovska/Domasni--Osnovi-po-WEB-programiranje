@@ -1,0 +1,25 @@
+
+ <div class="container">
+        <h2 class="textStyle" style="margin-bottom: 2ex;">Survey <i class="fa-solid fa-square-poll-vertical" style="color: #74C0FC;"></i></h2>
+        <div class="alert alert-warning"><p>What did you think about our site? <strong>Please fill out the evaluation form below!</strong>
+        Thank you so much in advance!</p>
+        <p style="text-align: end;"><em>-City Explorer</em></p></div>
+
+        <div class="position" *ngFor="let p of prashanja">
+            <p class="textStyle">{{p?.question}}</p>
+            <div *ngFor="let v of p?.values">
+                <label>
+                    <input [type]="p?.type" [name]="p?.name" [value]="v"> {{v}}
+                </label>
+            </div>
+            <div *ngIf="p?.values.length == 0">
+                <label>
+                    <input [type]="p?.type" [name]="p?.name">
+                </label>
+            </div>
+        </div>
+
+        <br>
+        <button routerLink="/home" class="button">Submit</button>
+
+ </div>
